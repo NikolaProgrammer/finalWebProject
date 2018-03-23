@@ -1,30 +1,43 @@
 <%@ taglib uri="/jstl/core" prefix="c"%>
 <%@ page import="by.gsu.epamlab.controllers.ConstantsJSP" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/loginReg.css">
-	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Registration page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<title>Registration</title>
 </head>
 <body>
 	<div class="wrapper">
-	<jsp:include page="/includes/header.jsp" />
-		<div class="content">
-		<c:if test="${not empty warningMessage}">
-			<c:out value="${warningMessage}"></c:out>
-		</c:if>
-			<form action='<c:url value="/registration" />' method="POST" class="userForm">
-				<p class="form_header">Registration</p>
-				<p>Login</p>
-				<input type="text" name="<%=ConstantsJSP.KEY_LOGIN %>">
-				<p>Password</p>
-				<input type="text" name="<%=ConstantsJSP.KEY_PASSWORD %>"><br>
-				<input type="submit" value="Register">
-			</form>
+		<jsp:include page="/includes/header.jsp" />
+
+		<div class="container-fluid main_content">
+			<c:if test="${not empty warningMessage}">
+				<div class="row justify-content-center">
+					<div class="col-3 warning_content">
+						<i class="fa fa-exclamation-circle" aria-hidden="true"></i> <c:out value="${warningMessage}"></c:out>
+					</div>
+				</div>
+			</c:if>
+			<div class="row justify-content-center">
+				<div class="col-3">
+					<form action="<c:url value='/registration' />" method="POST" class="registration_form">
+						<h2>Registration</h2>
+						<p>Login</p>
+						<input type="text" name="<%=ConstantsJSP.KEY_LOGIN %>">
+						<p>Password</p>
+						<input type="password" name="<%=ConstantsJSP.KEY_PASSWORD %>">
+						<input type="submit" value="Register">
+					</form>
+				</div>
+			</div>
 		</div>
+		
 		<jsp:include page="/includes/footer.jsp" />
 	</div>
+	<script src="js/jquery-3.3.1.min.js" />
+	<script src="js/bootstrap.min.js" />
 </body>
 </html>
