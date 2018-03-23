@@ -1,0 +1,27 @@
+.addTaskForm{
+	padding-top: 1.5em;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.addTaskForm input{
+	margin-bottom: 2em;
+}
+
+.addTaskContent{
+	width: 30em;
+	height: 2em;
+	text-align: center;
+	font-size: 0.7em;
+}
+.addTaskDate{
+	width: 18em;
+	height: 1.4em;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+.addTaskForm input[type=submit]{
+	width: 7em;
+	font-size: 0.8em;
+}

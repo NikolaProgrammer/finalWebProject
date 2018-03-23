@@ -1,0 +1,29 @@
+.form_header{
+	font-size: 1.5em;
+}
+
+.userForm{
+	padding-top: 1.5em;
+	text-align: center;
+	font-size: 1.3em;
+}
+
+.userForm input[type=text]{
+	width: 18em;
+	height: 1.4em;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+.userForm input[type=password]{
+	width: 18em;
+	height: 1.4em;
+	text-align: center;
+	font-size: 0.7em;
+}
+
+.userForm input[type=submit]{
+	margin-top: 2em;
+	width: 7em;
+	font-size: 0.8em;
+}
